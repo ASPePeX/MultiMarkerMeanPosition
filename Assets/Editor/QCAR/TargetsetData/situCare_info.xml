@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="QCAR_Dataset_config.xsd">
+  <TargetSet version="5.0" toolVersion="4.2.0">
+    <ObjectTarget bbox="0.0 0.0 0.0 142.5 95.0 95.0" captureAppVersion="1.0.0" lastSaved="2016-12-16 11:24:56" name="monnal-t50-back" targetId="9ac2ccdb88454b65887b1efbc507f4b7" version="2.0" />
+    <ObjectTarget bbox="0.0 0.0 0.0 142.5 95.0 95.0" captureAppVersion="1.0.0" lastSaved="2016-12-16 11:21:54" name="monnal-t50-front" targetId="a651ad5ece944a1ab452c6d094ae562a" version="2.0" />
+  </TargetSet>
+</QCARInfo>

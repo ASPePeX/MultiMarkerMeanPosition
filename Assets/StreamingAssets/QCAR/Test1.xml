@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="MarkerBWB9" size="1.000000 1.000000" />
+    <ImageTarget name="MarkerBWB8" size="1.000000 1.000000" />
+    <ImageTarget name="MarkerBWB7" size="1.000000 1.000000" />
+    <ImageTarget name="MarkerBWB6" size="1.000000 1.000000" />
+    <ImageTarget name="MarkerBWB5" size="1.000000 1.000000" />
+    <ImageTarget name="MarkerBWB4" size="1.000000 1.000000" />
+    <ImageTarget name="MarkerBWB3" size="1.000000 1.000000" />
+    <ImageTarget name="MarkerBWB2" size="1.000000 1.000000" />
+    <ImageTarget name="MarkerBWB1" size="1.000000 1.000000" />
+  </Tracking>
+</QCARConfig>
