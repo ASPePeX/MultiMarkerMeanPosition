@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using Vuforia;
 
-public class Stuff : MonoBehaviour
+public class CameraRefocus : MonoBehaviour
 {
-    private float focusUpdateEvery = 5f;
+    private readonly float focusUpdateEvery = Config.CameraRefocusTimer;
     private float focusTimer;
 
     void Update()
