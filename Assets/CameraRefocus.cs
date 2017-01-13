@@ -3,14 +3,25 @@ using Vuforia;
 
 public class CameraRefocus : MonoBehaviour
 {
-    private readonly float focusUpdateEvery = Config.CameraRefocusTimer;
     private float focusTimer;
+    private float touchFocusTimer;
 
     void Update()
     {
+        if (Input.touchCount > 0 && touchFocusTimer <= 0)
+        {
+            touchFocusTimer = Config.CameraRefocusOnTouchCooldown;
+            Focus();
+        }
+
+        if (touchFocusTimer > 0)
+        {
+            touchFocusTimer -= Time.deltaTime;
+        }
+
         if (focusTimer <= 0)
         {
-            focusTimer = focusUpdateEvery;
+            focusTimer = Config.CameraAutoRefocusCooldown;
             Focus();
         }
         else
