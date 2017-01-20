@@ -8,16 +8,16 @@ public class CameraRefocus : MonoBehaviour
 
     void Update()
     {
-        if (Input.touchCount > 0 && touchFocusTimer <= 0)
-        {
-            touchFocusTimer = Config.CameraRefocusOnTouchCooldown;
-            Focus();
-        }
+        //if (Input.touchCount > 0 && touchFocusTimer <= 0)
+        //{
+        //    touchFocusTimer = Config.CameraRefocusOnTouchCooldown;
+        //    Focus();
+        //}
 
-        if (touchFocusTimer > 0)
-        {
-            touchFocusTimer -= Time.deltaTime;
-        }
+        //if (touchFocusTimer > 0)
+        //{
+        //    touchFocusTimer -= Time.deltaTime;
+        //}
 
         if (focusTimer <= 0)
         {

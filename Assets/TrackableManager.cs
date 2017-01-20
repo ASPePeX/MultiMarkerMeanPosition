@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.VR.WSA;
 
 public class TrackableManager : MonoBehaviour
 {
@@ -10,7 +8,12 @@ public class TrackableManager : MonoBehaviour
     private GameObject center;
     private Vector3 centerpos;
 
-	// Use this for initialization
+    public HashSet<GameObject> Register
+    {
+        get { return register; }
+    }
+
+    // Use this for initialization
 	void Start () {
 		register = new HashSet<GameObject>();
 	    lr = GameObject.Find("Lines").GetComponent<LineRenderer>();
