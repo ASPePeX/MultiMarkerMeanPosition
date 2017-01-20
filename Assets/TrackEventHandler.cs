@@ -6,31 +6,35 @@ public class TrackEventHandler : MonoBehaviour, ITrackableEventHandler {
     private TrackableBehaviour _mTrackableBehaviour;
     private TrackableManager _trackableManager;
 
-    void Awake()
-    {
-        _trackableManager = GameObject.Find("GameController").GetComponent<TrackableManager>();
-    }
+    private bool ManagerReady;
 
     void Start()
     {
+        _trackableManager = GameObject.Find("GameController").GetComponent<TrackableManager>();
+
         _mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (_mTrackableBehaviour)
         {
             _mTrackableBehaviour.RegisterTrackableEventHandler(this);
         }
+
+        ManagerReady = true;
     }
 
     public void OnTrackableStateChanged(TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus)
     {
-        if (newStatus == TrackableBehaviour.Status.DETECTED ||
-            newStatus == TrackableBehaviour.Status.TRACKED ||
-            newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
+        if (ManagerReady)
         {
-            OnTrackingFound();
-        }
-        else
-        {
-            OnTrackingLost();
+            if (newStatus == TrackableBehaviour.Status.DETECTED ||
+                newStatus == TrackableBehaviour.Status.TRACKED ||
+                newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
+            {
+                OnTrackingFound();
+            }
+            else
+            {
+                OnTrackingLost();
+            }
         }
     }
 
