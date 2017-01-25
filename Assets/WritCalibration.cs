@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public class WritCalibration : MonoBehaviour
@@ -33,7 +35,11 @@ public class WritCalibration : MonoBehaviour
             StringBuilder bla = new StringBuilder();
             foreach (var o in _trackableManager.Register)
             {
-                bla.Append(o.name + " " + o.transform.position.ToString("F8") + "\n");
+                string posor = o.transform.position.ToString("F8") + "," + o.transform.rotation.eulerAngles.ToString("F8");
+
+                posor = Regex.Replace(posor, @"[\(\)\s]", "", RegexOptions.None);
+
+                bla.Append("\"" + o.name + "\"," + posor + "\n");
             }
             return bla.ToString();
         }
