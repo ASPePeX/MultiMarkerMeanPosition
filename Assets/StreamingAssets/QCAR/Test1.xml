@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="T50-left" size="6.000000 1.636364" />
+    <ImageTarget name="T50-right" size="6.000000 1.636364" />
+    <ImageTarget name="T50-back" size="6.000000 1.636364" />
+    <ImageTarget name="Marker-callibration-A4" size="1.000000 1.414516" />
     <ImageTarget name="MarkerBWB12" size="1.000000 1.000000" />
     <ImageTarget name="MarkerBWB11" size="1.000000 1.000000" />
     <ImageTarget name="MarkerBWB10" size="1.000000 1.000000" />
@@ -13,5 +17,6 @@
     <ImageTarget name="MarkerBWB3" size="1.000000 1.000000" />
     <ImageTarget name="MarkerBWB2" size="1.000000 1.000000" />
     <ImageTarget name="MarkerBWB1" size="1.000000 1.000000" />
+    <ImageTarget name="IMG_20160729_120432s" size="1.000000 0.668500" />
   </Tracking>
 </QCARConfig>

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -25,7 +24,7 @@ public class WritCalibration : MonoBehaviour
 
     private void SaveData()
     {
-        File.WriteAllText(SaveFile, Data);
+        File.AppendAllText(SaveFilePath, Data);
     }
 
     private string Data
@@ -33,6 +32,10 @@ public class WritCalibration : MonoBehaviour
         get
         {
             StringBuilder bla = new StringBuilder();
+            DateTime now = DateTime.Now;
+
+            bla.Append(now + "\n");
+
             foreach (var o in _trackableManager.Register)
             {
                 string posor = o.transform.position.ToString("F8") + "," + o.transform.rotation.eulerAngles.ToString("F8");
@@ -45,7 +48,7 @@ public class WritCalibration : MonoBehaviour
         }
     }
 
-    public string SaveFile
+    public string SaveFilePath
     {
         get { return Application.persistentDataPath + "/calibration.txt"; }
     }
